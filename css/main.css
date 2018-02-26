@@ -1,7 +1,7 @@
 /* Setup */
 
 html {
-    color: #FFFEFF;
+    color: #FFFFFF;
 }
 body {
     margin: 0;
@@ -32,83 +32,106 @@ textarea {
     resize: vertical;
 }
 
-/* Comment out text below to restore visible scrollbars! */
 ::-webkit-scrollbar { 
     display: none; 
 }
 
 
-/* layout 1 */
-body {
-    font-family: 'Arimo', sans-serif;
-    color: #4281A4;
+
+/* about me page layout css */
+
+body { /* body text */
+    font-family: 'Arimo', sans-serif; /* body font family */
+    color: #212125; /* body text color */
     height: 100vh;
     width: 100vw;
+    line-height: 1.4em;
 }
 
-a {
-    color: #9CAFB7;
-    border-bottom: 1px dotted #9CAFB7;
+a { /* link text */
+    color: #212125; /* link text color */
+    border-bottom: 1px dotted #212125; /* link text border styles */
     font-weight: 700;
     font-style: normal;
     line-height: 1.4em;
 }
 
-a:visited {
-    color: #9CAFB7;
-    border-bottom: 1px dotted #9CAFB7;
+a:visited { /* visited link text */
+    color: #212125; /* visited link text color */
+    border-bottom: 1px dotted #212125; /* visited link text border styles */
 }
 
-p {
+/*p {
     line-height: 1.4em;
-}
-
-main {
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 100vh;
-    /* adds background-color transparent gradient to the bottom of the box to indicate additional content. */
-    /* comment out or delete the two lines below to remove the gradient */
-    padding-bottom: 3vh;
-    -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-}
+}*/
 
 .hello-text {
     margin-left: -2vw;
     font-size: 20vmin;
     line-height: 20vmin;
     font-family: 'Pacifico', serif;
-    color: #FE938C;
+    color: #239D60;
 }
+
+
+
+
 
 /* Social Links Sidebar */
 /* You can find other icons to use at http://fontawesome.io/icons/ ; just replace the icon name
     in the HTML with the name of the icon you would like to use! */
 
-aside {
-    position: fixed;
-    height: 100%;
-}
-aside > a {
-    float: left;
-    text-align: center;
-    height: 25vh;
-    line-height: 25vh;
-    clear: both;
+/* style links */
+aside > a { 
+    border: none;
+    text-decoration: none;
+    color: #F7F39A;
 }
 
-#profile-picture {
-    float: left;
-    margin-top: 0vh;
-    margin-right: 3vw;
-    margin-bottom: 2vh;
+aside > a:visited {
+    text-decoration: none;
+    color: #F7F39A;
 }
+
+
+/* style element for desktop */
+@media screen and (min-width: 700px) {
+    aside.desktop {
+        position: fixed;
+        height: 100%;
+    }
+
+    aside.desktop > a {
+        float: left;
+        text-align: center;
+        height: 25vh;
+        line-height: 25vh;
+        clear: both;
+    }
+    aside.mobile {
+        display: none;
+    }
+}
+
+
+/* style element for mobile */
+@media screen and (max-width: 700px) {
+    aside.desktop {
+        display: none;
+    }
+    aside.mobile {
+    display: inline-flex;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+    }
+}
+
+
 
 
 /* Structural Elements */
-
-
-/* Using sections with the class 'page' attached will give you (roughly) full page
+/* Using sections with the class 'page' attached will give you full page
     elements to put your content in. The first/last-of-type prevents the first/last sections
     on the page from skewing */
 
@@ -126,7 +149,37 @@ section.page:last-of-type {
     padding-bottom: 35vh;
 }
 
+section.page.text {
+    padding-right: 30vw;
+}
+
+section.page.images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.page.images > article {
+    display: inline-block;
+}
+
+@media screen and (max-width: 700px) {
+    section.page.images > article {
+    }
+    section.page.text {
+        padding-right: 1em;
+    }
+}
+
+
+
 /* Image Effects */
+
+#profile-picture {
+    float: left;
+    margin-top: 0vh;
+    margin-right: 3vw;
+    margin-bottom: 2vh;
+}
 
 /* circular images
     requires square image - crop online at http://croppola.com/ */
@@ -138,26 +191,34 @@ section.page:last-of-type {
     width: 35vmin;
 }
 
-.styled-image {
+.image-shadow {
     -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
-    border-color: #9CAFB7;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+
+}
+
+.image-border {
+    border-color: #239D60;
     border-radius: 1%;
     border-style: solid;
     border-width: 2px;
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
-    max-height: 65vmin;
-    max-width: 65vmin;
+}
+
+.image-scaled {
+    max-height: 35vmin;
+    max-width: 35vmin;
 }
 
 .image-box {
-    margin-top: 1vmin;
-    margin-bottom: 1vmin;
+    margin: 1vmin;
 }
 
-.resized-image {
-    max-height: 35vmin;
-    max-width: 35vmin;
+@media screen and (max-width: 700px) {
+    .image-scaled {
+        max-height: 15vmin;
+        max-width: 15vmin;
+    }
 }
 
 
@@ -179,11 +240,11 @@ section.page:last-of-type {
 
 
 .plus-bg {
-    background: radial-gradient(circle, transparent 20%, #E6B89C 20%, #E6B89C 80%, transparent 80%, transparent),
-        radial-gradient(circle, transparent 20%, #E6B89C 20%, #E6B89C 80%, transparent 80%, transparent) 50px 50px,
-        linear-gradient(#EAD2Ac 8px, transparent 8px) 0 -4px,
-        linear-gradient(90deg, #EAD2Ac 8px, transparent 8px) -4px 0;
-    background-color: #E6B89C;
+    background: radial-gradient(circle, transparent 20%, #A3DE83 20%, #A3DE83 80%, transparent 80%, transparent),
+        radial-gradient(circle, transparent 20%, #A3DE83 20%, #A3DE83 80%, transparent 80%, transparent) 50px 50px,
+        linear-gradient(#F7F39A 8px, transparent 8px) 0 -4px,
+        linear-gradient(90deg, #F7F39A 8px, transparent 8px) -4px 0;
+    background-color: #A3DE83;
     background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
 }
 
@@ -224,7 +285,7 @@ section.page:last-of-type {
 
 .image-background {
     background-color: #DD7F77;
-    background-image: url(../images/stock-images/pink-smoke-suitcase.jpg);
+    background-image: url(../images/stock-images/coffee-and-notebook.jpg);
     background-position: 50% 25%;
     background-repeat: no-repeat;
     z-index: -2;
@@ -258,7 +319,7 @@ section.page:last-of-type {
 
 /* repeating pattern overlay over image or solid color */
 [class*='-background'] > .overlay {
-    background-image: url(../images/patterns/crossed-squares.png);
+    background-image: url(../images/patterns/worn-dots.png);
     background-repeat: repeat;
     height: 105vh;
     left: -5vw;

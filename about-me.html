@@ -1,69 +1,77 @@
 <!DOCTYPE html>
 <html>
 		<head>
-				<title>Starter Page</title>
-				<!-- Change the link tag below this line to change your fonts! -->
-				<link href="https://fonts.googleapis.com/css?family=Arimo|Pacifico" rel="stylesheet">
+				<title>Starter Page</title>				
+				<script src="./lib/jquery-3.3.1.min.js"></script>
+				<script src="./lib/jquery.onepage-scroll.min.js"></script>
+				<link rel="stylesheet" type="text/css" href="./css/onepage-scroll.css">
+				<script>
+					$(document).ready(function() {
+						$('.main').onepage_scroll({
+							sectionContainer: "section",
+							loop: true,
+							pagination: false
+						});
+					});
+				</script>
+				<link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
 				<!-- The sheet below is where you will make your CSS changes, ./css/main.css -->
 				<link rel="stylesheet" type="text/css" href="./css/main.css">
-				<link rel="stylesheet" type="text/css" href="./lib/image-slider/image-slider.css">
 				<link rel="stylesheet" type="text/css" href="./lib/grid.css">
-				<link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+
+				<!-- Change the link tag below this line to change your fonts! -->
+				<link href="https://fonts.googleapis.com/css?family=Arimo|Pacifico" rel="stylesheet">
 		</head>
 
-		<body class="plus-bg grid">
+		<body class="image-background grid">
+			<div class="overlay"></div>
 
-			<!-- social icons -->
-			<aside class="grid__col grid__col-1-of-8">
+			<!-- social icons FOR DESKTOP, also change MOBILE section below -->
+			<aside class="grid__col grid__col-1-of-8 desktop">
 				<a href="https://twitter.com/TooxCB"><i class="fa fa-twitter fa-2x"></i></a>
 				<a href="https://github.com/CBElizabeth"><i class="fa fa-github-alt fa-2x"></i></a>
 				<a href="https://www.facebook.com/elizabeth.blackburn.98"><i class="fa fa-facebook-f fa-2x"></i></a>
 				<a href="https://www.linkedin.com/in/cbelizabeth"><i class="fa fa-linkedin fa-2x"></i></a>
 			</aside>
 
-			<main class="grid__col grid__col-5-of-8 grid__col--push-1-of-8">
+			<main class="grid__col grid__col-5-of-8 grid__col--push-1-of-8 main">
 
-
-					<section class="page grid__col grid__col-3-of-5">
+					<section class="grid__col grid__col-3-of-5 page text">
 						<article>
 							<span class="hello-text">Hello!</span>
 							<h3 class="subheader">My name is Elizabeth Blackburn and I like making stuff.</h3>
 							<p>I live in <i class="fa fa-map-marker"></i> Columbus, OH and work as a React.Js developer at <a href="https://www.wendys.com/">The Wendy's Company</a>.</p>
 						</article>
+
+						<!-- social icons FOR MOBILE, also change DESKTOP section above -->
+						<aside class="grid__col grid__col-1-of-8 mobile">
+							<a href="https://twitter.com/TooxCB"><i class="fa fa-twitter fa-2x"></i></a>
+							<a href="https://github.com/CBElizabeth"><i class="fa fa-github-alt fa-2x"></i></a>
+							<a href="https://www.facebook.com/elizabeth.blackburn.98"><i class="fa fa-facebook-f fa-2x"></i></a>
+							<a href="https://www.linkedin.com/in/cbelizabeth"><i class="fa fa-linkedin fa-2x"></i></a>
+						</aside>
 					</section>
 
 
 
-					<section class="page grid__col grid__col-3-of-5">
+					<section class="grid__col grid__col-3-of-5 page text">
 						<h2>Here's some filler text about cheese.</h2>
-						<img src="./images/profile-pic.jpg" class="circular-square" id="profile-picture">
+						<img src="./images/scorpions.jpg" class="circular-square" id="profile-picture">
 						<p>Monterey jack cream cheese goat. Manchego melted cheese airedale ricotta swiss airedale fromage frais caerphilly. St. agur blue cheese swiss cow cheese strings cottage cheese paneer dolcelatte cottage cheese. Rubber cheese queso cut the cheese.</p>
 						<p>Macaroni cheese cheesy grin feta. Cheese slices cheddar fromage fromage frais brie cheese triangles lancashire blue castello.</p>
 						<p>Melted cheese fondue say cheese. Ricotta danish fontina fromage frais st. agur blue cheese gouda cheese triangles chalk and cheese squirty cheese.</p>
 					</section>
 
-
-					<!-- The Slider -->
-
-					<section class="page grid__col grid__col-3-of-5">
-						<article class="grid__col grid__col-1-of-2 image-box">
-							<img src="./images/edie-face.jpg" class="styled-image">
-						</article>							
-						<article class="grid__col grid__col-1-of-2 image-box">
-							<img src="./images/edie-sleep.jpg" class="styled-image">
-						</article>							
-						<article class="grid__col grid__col-1-of-2 image-box">
-							<img src="./images/edie-and-greg.jpg" class="styled-image">
-						</article>
-						<article class="grid__col grid__col-1-of-2 image-box">
-							<img src="./images/greg-face.jpg" class="styled-image">
-						</article>
+					<section class="grid__col grid__col-3-of-5 page images">
+						<article class="image-box">
+							<img src="./images/pup-3.jpg" class="image-scaled image-shadow image-border">
+						</article>						
+						<article class="image-box">
+							<img src="./images/pup-4.jpg" class="image-scaled image-shadow image-border">
+						</article>				
 					</section>
 
-					<!-- End of Slider -->
-
-
-					<section class="text-box page grid__col grid__col-3-of-5">
+					<section class="grid__col grid__col-3-of-5 page text">
 						<h2>Here's another thing..</h2>
 						<p>I love cheese, especially fromage cheese and biscuits. Manchego stilton dolcelatte monterey jack taleggio red leicester manchego cauliflower cheese.</p>
 						<p>Bavarian bergkase when the cheese comes out everybody's happy babybel cheese strings chalk and cheese danish fontina cheddar stilton.</p>
