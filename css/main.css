@@ -61,18 +61,23 @@ a:visited { /* visited link text */
     border-bottom: 1px dotted #212125; /* visited link text border styles */
 }
 
-/*p {
+p {
     line-height: 1.4em;
-}*/
-
-.hello-text {
-    margin-left: -2vw;
-    font-size: 20vmin;
-    line-height: 20vmin;
-    font-family: 'Pacifico', serif;
-    color: #239D60;
 }
 
+#hello-text { /* first section header text */
+    margin-left: -2vw;
+    font-size: 20vmin; /* 'hello' text text size */
+    line-height: 20vmin;
+    font-family: 'Pacifico', serif; /* 'hello' text font family */
+    color: #239D60; /* 'hello' text text color */
+}
+
+section > h2 { /* section header text */
+    font-size: 2em; /* section header font size */
+    line-height: 2em; 
+    font-family: 'Pacifico', serif; /* section header font family */
+}
 
 
 
@@ -85,12 +90,12 @@ a:visited { /* visited link text */
 aside > a { 
     border: none;
     text-decoration: none;
-    color: #F7F39A;
+    color: #F7F39A; /* icon color */
 }
 
 aside > a:visited {
     text-decoration: none;
-    color: #F7F39A;
+    color: #F7F39A; /* visited icon color */
 }
 
 
@@ -131,40 +136,19 @@ aside > a:visited {
 
 
 /* Structural Elements */
-/* Using sections with the class 'page' attached will give you full page
-    elements to put your content in. The first/last-of-type prevents the first/last sections
-    on the page from skewing */
-
+/* Using sections with the class 'page' attached will give you full page elements to put your content in. */
 section.page {
     padding-right: 15vw;
-    padding-bottom: 28vh;
-    padding-top: 28vh;
-}
-
-section.page:first-of-type {
-    padding-top: 35vh;
-}
-
-section.page:last-of-type {
-    padding-bottom: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 section.page.text {
     padding-right: 30vw;
 }
 
-section.page.images {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-section.page.images > article {
-    display: inline-block;
-}
-
 @media screen and (max-width: 700px) {
-    section.page.images > article {
-    }
     section.page.text {
         padding-right: 1em;
     }
@@ -173,17 +157,21 @@ section.page.images > article {
 
 
 /* Image Effects */
-
-#profile-picture {
+.image-left {
     float: left;
     margin-top: 0vh;
     margin-right: 3vw;
     margin-bottom: 2vh;
 }
 
-/* circular images
-    requires square image - crop online at http://croppola.com/ */
+.image-right {
+    float: right;
+    margin-top: 0vh;
+    margin-left: 3vw;
+    margin-bottom: 2vh;
+}
 
+/* circular image requires square image - crop online at http://croppola.com/ */
 .circular-square {
     border-radius: 50%;
     height: 35vmin;
@@ -229,7 +217,7 @@ section.page.images > article {
     -change the hex values consistently (e.g. find 
         all #E6B89C values in the same {} block and
         change them to the color of your choice :D */
-    
+
 .polka-dot-bg {
     background-color:#001;
     background-image: radial-gradient(white 15%, transparent 16%), 
@@ -282,7 +270,6 @@ section.page.images > article {
 
 
 /* fullscreen background image */
-
 .image-background {
     background-color: #DD7F77;
     background-image: url(../images/stock-images/coffee-and-notebook.jpg);
@@ -311,7 +298,6 @@ section.page.images > article {
 
 
 /* solid background color */
-
 .solid-background {
     background-color: #E9ECE5;
     z-index: -2;
