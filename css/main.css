@@ -42,14 +42,14 @@ textarea {
 
 body { /* body text */
     font-family: 'Arimo', sans-serif; /* body font family */
-    color: #212125; /* body text color */
+    color: #42413D; /* body text color */
     height: 100vh;
     width: 100vw;
     line-height: 1.4em;
 }
 
 a { /* link text */
-    color: #212125; /* link text color */
+    color: #42413D; /* link text color */
     border-bottom: 1px dotted #212125; /* link text border styles */
     font-weight: 700;
     font-style: normal;
@@ -57,7 +57,7 @@ a { /* link text */
 }
 
 a:visited { /* visited link text */
-    color: #212125; /* visited link text color */
+    color: #42413D; /* visited link text color */
     border-bottom: 1px dotted #212125; /* visited link text border styles */
 }
 
@@ -70,7 +70,7 @@ p {
     font-size: 20vmin; /* 'hello' text text size */
     line-height: 20vmin;
     font-family: 'Pacifico', serif; /* 'hello' text font family */
-    color: #239D60; /* 'hello' text text color */
+    color: #FFFFFF; /* 'hello' text text color */
 }
 
 section > h2 { /* section header text */
@@ -272,7 +272,7 @@ section.page.text {
 /* fullscreen background image */
 .image-background {
     background-color: #DD7F77;
-    background-image: url(../images/stock-images/coffee-and-notebook.jpg);
+    background-image: url(../images/stock-images/yellow-industrial-doors.jpg);
     background-position: 50% 25%;
     background-repeat: no-repeat;
     z-index: -2;
@@ -305,7 +305,7 @@ section.page.text {
 
 /* repeating pattern overlay over image or solid color */
 [class*='-background'] > .overlay {
-    background-image: url(../images/patterns/worn-dots.png);
+    background-image: url(../images/patterns/triangles.png);
     background-repeat: repeat;
     height: 105vh;
     left: -5vw;
